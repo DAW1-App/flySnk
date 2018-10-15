@@ -1,0 +1,14 @@
+.contenedor {
+    max-width: 980px;
+
+}
+.contenedor {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.carrousel2{
+    margin-right: 30px;
+}
