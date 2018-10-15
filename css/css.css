@@ -1,7 +1,15 @@
+body {
+    background-color: #dcdcdc;
+}
+
+.bg-light {
+    /* border-radius: 10px; */
+}
+
 .contenedor {
     max-width: 980px;
-
 }
+
 .contenedor {
     width: 100%;
     margin: 0 auto;
@@ -9,6 +17,12 @@
     margin-top: 30px;
     margin-bottom: 20px;
 }
-.carrousel2{
+
+.carrousel2 {
     margin-right: 30px;
+}
+
+
+.btn.btn-outline-success.my-2.my-sm-0:last-child {
+    margin-left: 10px;
 }
