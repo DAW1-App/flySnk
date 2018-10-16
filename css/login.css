@@ -123,6 +123,10 @@ a {
     display: block;
 }
 
+.login-form .group .input {
+    color: black;
+}
+
 .login-form .group .input,
 .login-form .group .button {
     border: none;
@@ -138,7 +142,7 @@ a {
 }
 
 .login-form .group .label {
-    color: #aaa;
+    color: #777;
     font-size: 12px;
 }
 
@@ -230,7 +234,7 @@ input {
 }
 
 input:focus {
-    box-shadow: 0 0 0 2pt green !important;
+    box-shadow: 0 0 0 2pt #1161ee !important;
 }
 
 .space {
