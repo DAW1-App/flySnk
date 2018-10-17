@@ -147,7 +147,8 @@ a {
 }
 
 .login-form .group .button {
-    background: #1161ee;
+    background: black;
+    cursor: pointer;
 }
 
 .login-form .group label .icon {
@@ -189,7 +190,7 @@ a {
 }
 
 .login-form .group .check:checked + label .icon {
-    background: #1161ee;
+    background: #1161ee;    
 }
 
 .login-form .group .check:checked + label .icon:before {

@@ -12,6 +12,7 @@
     display: table;
     max-width: 200px;
     margin: 20px;
+    border: 1px solid black;
 }
 
 .card {
