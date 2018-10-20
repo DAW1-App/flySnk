@@ -93,3 +93,8 @@ nav form button:hover>a {
         margin-bottom: 2em;
     }
 }
+
+.footerSk{
+    text-align: center;
+    border-top: 2px solid white;
+}
