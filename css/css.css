@@ -22,7 +22,74 @@ body {
     margin-right: 30px;
 }
 
+/* Retoques navbar */
+/* Hackovo te ha HACKEADO*/
+/* hacking.hacks() */
 
-.btn.btn-outline-success.my-2.my-sm-0:last-child {
+nav .btn.btn-outline-success.my-2.my-sm-0:last-child {
     margin-left: 10px;
+}
+
+nav form button>a {
+    text-decoration: none !important;
+    color: #28a745;
+}
+
+nav form button:hover>a {
+    color: white;
+}
+
+.contenedor:first-child > .row.row-up {
+    margin-top: 0px !important;
+}
+
+/* Retoques about us */
+
+#aboutUs-div {
+    width: 90% !important;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: relative;
+}
+
+#aboutUs-div .contenedor {
+    margin: 40px;
+}
+
+#aboutUs-div > .first > h2 {
+    text-align: center;
+}
+#aboutUs-div div.text p {
+    text-align: justify;
+}
+
+#aboutUs-div #about_underline {
+    width: 12em;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 5em;
+    border-bottom: 2px solid black;
+}
+
+@media (min-width: 991px) {
+    #aboutUs-div .content {
+        display: flex;
+    }
+
+    #aboutUs-div div.text {
+        margin-left: 2em;
+    }
+}
+
+@media (max-width: 992px) {
+    #aboutUs-div .content {
+        display: table;
+    }
+
+    #aboutUs-div .img {
+        margin-bottom: 2em;
+    }
 }
