@@ -2,10 +2,6 @@ body {
     background-color: #dcdcdc;
 }
 
-.bg-light {
-    /* border-radius: 10px; */
-}
-
 .contenedor {
     max-width: 980px;
 }
@@ -30,12 +26,12 @@ nav .btn.btn-outline-success.my-2.my-sm-0:last-child {
     margin-left: 10px;
 }
 
-nav form button>a {
+nav form button > a {
     text-decoration: none !important;
     color: #28a745;
 }
 
-nav form button:hover>a {
+nav form button:hover > a {
     color: white;
 }
 
@@ -94,7 +90,7 @@ nav form button:hover>a {
     }
 }
 
-.footerSk{
+.footerSk {
     text-align: center;
     border-top: 2px solid white;
 }

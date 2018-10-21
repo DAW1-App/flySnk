@@ -1,0 +1,85 @@
+#carouselMain {
+    margin: auto;
+}
+
+#carouselLeft,
+#carouselRigth,
+#carouselLeft .carousel-item,
+#carouselRigth .carousel-item {
+    height: 350px;
+}
+
+#carouselLeft,
+#carouselRigth {
+    width: 48.7%;
+}
+
+#carouselLeft .carousel-item,
+#carouselRigth .carousel-item {
+    width: 100%;
+}
+
+@media (min-width: 991px) {
+    #carouselMain,
+    #carouselMain .carousel-item {
+        height: 460px;
+        width: 980px;
+    }
+
+    #carouselBottom {
+        width: 980px;
+        margin: 20px auto;
+        display: flex;
+    }
+
+    #carouselRigth {
+        float: right;
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    #carouselMain {
+        width: 90%;
+    }
+
+    #carouselMain .carousel-item {
+        height: 360px;
+        width: 100%;
+    }
+
+    #carouselBottom {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+    }
+
+    #carouselRigth {
+        float: right;
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #carouselBottom {
+        width: 90%;
+        margin: 20px auto;
+        margin-bottom: 380px;
+        display: block;
+    }
+
+    #carouselLeft,
+    #carouselRigth {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+/* esto es lo que hace la magia de "recortar" la imagen */
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
