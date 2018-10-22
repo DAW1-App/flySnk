@@ -1,174 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/card.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.blue-orange.min.css">
-    <!-- Material Design icon font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="css/card.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <title>FlySnk - Release</title>
+  <script src="js/material/material.min.js"></script>
+  <!-- Material Design icon font -->
+  <link rel="stylesheet" href="css/material/icon.css">
+  <link rel="stylesheet" href="css/material/material.blue-orange.min.css">
 
-  </head>
+  <script src="js/ajax/jquery.min.js"></script>
+  <script src="js/ajax/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+
+  <title>FlySnk - Release</title>
+
+</head>
 
 <body>
 
-<header>
+  <header>
+    <div class="contenedor">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">FlySnk</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active active">
+              <a class="nav-link" href="general.html"> Footwear<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active active">
+              <a class="nav-link" href="release.html">Snk Release<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='login.html'" type="button">Login</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
   <div class="contenedor">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-              aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">FlySnk</a>
+    <div class="flex-container">
+      <!-- Square card -->
+      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+        <div class="mdl-card__title mdl-card--expand">
+          <img src="img/v2static.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p><strong>Adidas Yeezy Boost 350 V2</strong></p>
+          <p> Release Date: December 2018</p>
+          <p>Price: $220</p>
+          <p>Color: Static/Static/Static</p>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active active">
-            <a class="nav-link" href="general.html"> Footwear<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active active">
-            <a class="nav-link" href="release.html">Snk Release<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='login.html'" type="button">Login</button>
-        </form>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="/releaseView/release1.html" class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+            Details
+          </a>
+        </div>
       </div>
-    </nav>
-  </div>
-</header>
+      <!-- Square card -->
+      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+        <div class="mdl-card__title mdl-card__accent mdl-card--expand">
 
+          <img src="img/700.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p><strong>Adidas Yeezy Boost 700</strong></p>
+          <p> Release Date: October 27th, 2018</p>
+          <p>Price: $300</p>
+          <p> Color: Mauve/Mauve/Mauve</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="/releaseView/release2.html" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Details
+          </a>
+        </div>
+      </div>
+      <!-- Square card -->
+      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+        <div class="mdl-card__title mdl-card--expand">
+          <img src="img/nmdhu.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p><strong>Pharrell Williams x adidas NMD Hu "Inspiration Pack"</strong></p>
+          <p> Release Date: October 27th, 2018</p>
+          <p>Price: $250</p>
+          <p>Color:Footwear White/Bold Green/Bright Yellow</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="#" class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+            Details
+          </a>
+        </div>
+      </div>
+      <!-- Square card -->
+      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+        <div class="mdl-card__title mdl-card--expand">
+          <img src="img/salt.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p><strong>Adidas Yeezy 500</strong></p>
+          <p> Release Date: November 16 2018</p>
+          <p>Price: $200</p>
+          <p>Color:Salt/Salt/Salt</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Details
+          </a>
+        </div>
+      </div>
+      <!-- Square card -->
+      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+        <div class="mdl-card__title mdl-card--expand">
+          <img src="img/zebra.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p><strong>Adidas Yeezy Boost 350 v2 “Zebra”</strong></p>
+          <p>Release Date: November 9th, 2018</p>
+          <p>Price: $220</p>
+          <p>Color: White/Core Black/Red</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="#" class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+            Details
+          </a>
+        </div>
+      </div>
+      <!-- Square card -->
+      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+        <div class="mdl-card__title mdl-card--expand">
+          <img src="img/97max.jpg" alt="Avatar" style="width:100%">
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p><strong>Off-White x Nike Air Max 97</strong></p>
+          <p>Release Date: October 18, 2018</p>
+          <p>Price: $180</p>
+          <p>Color: Off White/Wolf Grey-White-Menta</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-<div class="contenedor">
-  <div class="flex-container">
-  <!-- Square card -->
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <img src="img/v2static.jpg" alt="Avatar" style="width:100%">
-    </div>
-    <div class="mdl-card__supporting-text">
-      <p><strong>Adidas Yeezy Boost 350 V2</strong></p>
-      <p> Release Date: December 2018</p>
-      <p>Price: $220</p>
-      <p>Color: Static/Static/Static</p>
-
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
-        Details
-      </a>
-    </div>
-  </div>
-  <!-- Square card -->
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card__accent mdl-card--expand">
-
-      <img src="img/700.jpg" alt="Avatar" style="width:100%">
-    </div>
-    <div class="mdl-card__supporting-text">
-      <p><strong>Adidas Yeezy Boost 700</strong></p>
-      <p> Release Date: October 27th, 2018</p>
-      <p>Price: $300</p>
-      <p> Color: Mauve/Mauve/Mauve</p>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        Details
-      </a>
-    </div>
-  </div>
-  <!-- Square card -->
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <img src="img/nmdhu.jpg" alt="Avatar" style="width:100%">
-    </div>
-    <div class="mdl-card__supporting-text">
-      <p><strong>Pharrell Williams x adidas NMD Hu "Inspiration Pack"</strong></p>
-      <p> Release Date: October 27th, 2018</p>
-      <p>Price: $250</p>
-      <p>Color:Footwear White/Bold Green/Bright Yellow</p>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
-        Details
-      </a>
-    </div>
-  </div>
-  <!-- Square card -->
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <img src="img/salt.jpg" alt="Avatar" style="width:100%">
-    </div>
-    <div class="mdl-card__supporting-text">
-      <p><strong>Adidas Yeezy 500</strong></p>
-      <p> Release Date: November 16 2018</p>
-      <p>Price: $200</p>
-      <p>Color:Salt/Salt/Salt</p>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        Details
-      </a>
-    </div>
-  </div>
-  <!-- Square card -->
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <img src="img/zebra.jpg" alt="Avatar" style="width:100%">
-    </div>
-    <div class="mdl-card__supporting-text">
-      <p><strong>Adidas Yeezy Boost 350 v2 “Zebra”</strong></p>
-      <p>Release Date: November 9th, 2018</p>
-      <p>Price: $220</p>
-      <p>Color: White/Core Black/Red</p>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
-        Details
-      </a>
-    </div>
-  </div>
-  <!-- Square card -->
-  <div class="mdl-card mdl-shadow--2dp demo-card-square">
-    <div class="mdl-card__title mdl-card--expand">
-      <img src="img/97max.jpg" alt="Avatar" style="width:100%">
-    </div>
-    <div class="mdl-card__supporting-text">
-      <p><strong>Off-White x Nike Air Max 97</strong></p>
-      <p>Release Date: October 18, 2018</p>
-      <p>Price: $180</p>
-      <p>Color: Off White/Wolf Grey-White-Menta</p>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-        Details
-      </a>
-    </div>
-  </div>
-  </div>
-</div>
-
-  <footer class = "contenedor footerSk">
+  <footer class="contenedor footerSk">
 
     <p style="margin-top: 10px;">Copyright (C) 2018 FlySnk All Rights Reserved</p>
 
   </footer>
 
 </body>
+
 </html>
