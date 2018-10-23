@@ -93,9 +93,13 @@ nav form button:hover > a {
     #aboutUs-div div.text {
         margin-left: 2em;
     }
+
 }
 
 @media (max-width: 992px) {
+    .text p {
+        width: 100% !important;
+    }
     #aboutUs-div .content {
         display: table;
     }
