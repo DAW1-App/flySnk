@@ -234,8 +234,8 @@ input {
     outline: none;
 }
 
-input:focus {
-    box-shadow: 0 0 0 2pt #1161ee !important;
+.group:not(.has-error) input:focus {
+    box-shadow: inset 0 0 0 2px #1161ee !important;
 }
 
 .space {
@@ -244,4 +244,51 @@ input:focus {
 
 #lastGroup {
     margin-bottom: 35px;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid, 
+.was-validated .custom-select:invalid, 
+.custom-select.is-invalid,
+.group.has-error.has-danger input:focus,
+.group.has-mail-error input:focus 
+
+/* 
+.error:not(.dirty) 
+*/
+{
+    -webkit-box-shadow: inset 0px 0px 0px 2px rgba(255,0,0,1) !important;
+    -moz-box-shadow: inset 0px 0px 0px 2px rgba(255,0,0,1) !important;
+    box-shadow: inset 0px 0px 0px 2px rgba(255,0,0,1) !important;
+}
+
+
+
+.group {
+    position: relative;
+}
+
+.invalid-tooltip {
+    top: -13% !important;
+    -webkit-touch-callout: none;    /* iOS Safari */
+    -webkit-user-select: none;      /* Safari */
+    -khtml-user-select: none;       /* Konqueror HTML */
+    -moz-user-select: none;         /* Firefox */
+    -ms-user-select: none;          /* Internet Explorer/Edge */
+    user-select: none;              /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+#userTooltip {
+    margin-right: 50px;
+    width: 350px; 
+}
+#userTooltip,
+#passwordTooltip {
+    text-align: left;
+    margin: 10px;
+}
+
+.help-block.with-errors>.list-unstyled {
+    display: none;
 }
