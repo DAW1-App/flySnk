@@ -1,240 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/card.css">
-    <script src="js/ajax/jquery.min.js"></script>
-    <script src="js/ajax/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <title>FlySnk - Footwear</title>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+        <link rel="stylesheet" href="css/css.css" />
+        <link rel="stylesheet" href="css/card.css" />
+        <script src="js/ajax/jquery.min.js"></script>
+        <script src="js/ajax/popper.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <title>FlySnk - Footwear</title>
+    </head>
 
-  </head>
+    <body>
+        <header>
+            <div class="contenedor">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">FlySnk</a>
 
-<body>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item active active">
+                                <a class="nav-link" href="general.html">Footwear<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active active">
+                                <a class="nav-link" href="release.html">Snk Release<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='login.html'" type="button">Login</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
-<header>
-  <div class="contenedor">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-              aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">FlySnk</a>
+        <div class="contenedor" id="stock"></div>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active active">
-            <a class="nav-link" href="general.html"> Footwear<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active active">
-            <a class="nav-link" href="release.html">Snk Release<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='login.html'" type="button">Login</button>
-        </form>
-      </div>
-    </nav>
-  </div>
-</header>
-
-
-
-<div class="contenedor">
-  <ul class="flex-container">
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/500blush.html">
-          <img src="sneakers/500blush.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Adidas Yeezy</b></h4>
-            <p>500 Blush</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/700wave.html">
-          <img src="sneakers/700wave.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Adidas Yeezy</b></h4>
-            <p>700 Wave</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/belugav2.html">
-          <img src="sneakers/beluga.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Adidas Yeezy</b></h4>
-            <p>Beluga 350 v2</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/chucktaylor.html">
-          <img src="sneakers/chucktaylor.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Off White</b></h4>
-            <p>Chuck Taylor</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/nmdhuPale.html">
-          <img src="sneakers/nmdhuPale.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Adidas Nmd</b></h4>
-            <p>Human Race Pale</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/nmdhuRed.html">
-          <img src="sneakers/nmdhuRed.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Adidas Nmd</b></h4>
-            <p>Human Race Scarlet</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/offjordanBlue.html">
-          <img src="sneakers/offjordanBlue.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Off White</b></h4>
-            <p>Jordan University Blue</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/offjordanwhite.html">
-          <img src="sneakers/offjordanwhite.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Off White</b></h4>
-            <p>Jordan 1 Retro High</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/offpresto.html">
-          <img src="sneakers/offpresto.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Off White</b></h4>
-            <p>Air Presto</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/offwhiteVapor.html">
-          <img src="sneakers/offwhitevapor.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Off White</b></h4>
-            <p>Vapor Max White</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/reactund.html">
-          <img src="sneakers/reactund.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Nike React 87</b></h4>
-            <p>Undercover Green</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/reactwhite.html">
-          <img src="sneakers/reactwhite.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Nike React 87</b></h4>
-            <p>Light Bone</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/solared.html">
-          <img src="sneakers/solared.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Nike React 87</b></h4>
-            <p>Solar Red</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/coreblack.html">
-          <img src="sneakers/coreblack.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Adidas Yeezy</b></h4>
-            <p> Core Black 350 v2</p>
-          </div>
-        </a>
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/wotherspoon.html">
-          <img src="sneakers/wotherspoon.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Nike Air Max</b></h4>
-            <p>Sean Wotherspoon</p>
-          </div>
-        </a>  
-      </div>
-    </li>
-    <li class="flex-item">
-      <div class="card">
-        <a href="vistaSnk/blazer.html">
-          <img src="sneakers/blazer.jpg" alt="Avatar" style="width:100%">
-          <div class="container">
-            <h4><b>Nike Blazer </b></h4>
-            <p>Off-White Grim Reaper</p>
-          </div>
-        </a>
-      </div>
-    </li>
-  </ul>
-</div>
-
-  <footer class = "contenedor footerSk">
-
-    <p style="margin-top: 10px;">Copyright (C) 2018 FlySnk All Rights Reserved</p>
-
-  </footer>
-
-</body>
+        <footer class="contenedor footerSk">
+            <p style="margin-top: 10px;">Copyright (C) 2018 FlySnk All Rights Reserved</p>
+        </footer>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/load_general_stock.js"></script>
+    </body>
 </html>
