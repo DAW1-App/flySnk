@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="js/ajax/jquery.min.js"></script>
     <script src="js/ajax/popper.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
@@ -46,6 +49,26 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='login.html'" type="button">Login</button>
           </form>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <label for="modal-basket-toggle"><i class="fas fa-shopping-cart"></i></label>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-basket-container">
+          <input type="checkbox" id="modal-basket-toggle">
+          <label class="modal-backdrop" for="modal-basket-toggle"></label>
+
+          <div class="modal-content">
+            <label class="modal-close-btn" for="modal-basket-toggle">
+              <svg width="50" height="50">
+                <line x1="10" y1="10" x2="40" y2="40"/>
+                <line x1="40" y1="10" x2="10" y2="40"/>
+              </svg>
+            </label>
+            <h4><b>Nike React 87</b></h4>
+            <p>Undercover Green</p>
+          </div>
         </div>
       </nav>
     </div>
