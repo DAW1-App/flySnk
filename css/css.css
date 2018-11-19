@@ -136,3 +136,12 @@ nav form button:hover > a {
 .mdl-card__actions.mdl-card--border a{
     text-decoration: none;
 }
+
+#cart-container{
+    margin-left: .7rem;
+}
+
+#cart img{
+    width: 2rem !important;
+    height: 2rem !important;
+}

@@ -1,4 +1,4 @@
-$.getJSON("../json/stock.json", function(shoes) {
+$.getJSON("json/stock.json", function(shoes) {
     loadCards(shoes);
 });
 

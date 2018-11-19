@@ -2289,9 +2289,21 @@ textarea.form-control {
   }
   .form-inline .form-control {
     display: inline-block;
-    width: auto;
+    width: 5rem;
     vertical-align: middle;
+
+    transition: width 0.2s ease-in-out;
+    -moz-transition: width 0.2s ease-in-out; /* Firefox 4 */
+    -webkit-transition: width 0.2s ease-in-out; /* Safari and Chrome */
+    -o-transition: width 0.2s ease-in-out; /* Opera */
+    -ms-transition: width 0.2s ease-in-out; /* Explorer 10 */
+
   }
+
+  .form-control:focus {
+    width: 200px;
+  }
+
   .form-inline .form-control-plaintext {
     display: inline-block;
   }
