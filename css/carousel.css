@@ -78,7 +78,7 @@
 }
 
 /* esto es lo que hace la magia de "recortar" la imagen */
-img {
+.carousel img {
     object-fit: cover;
     height: 100%;
     width: 100%;

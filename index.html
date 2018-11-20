@@ -16,18 +16,42 @@
     <link rel="stylesheet" href="css/css.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/carousel.css">
-    <!--<link rel="stylesheet" href="css/shop.css">-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="js/ajax/jquery.min.js"></script>
+    <script src="js/ajax/popper.min.js"></script>
+    <script src="js/swipe_menu.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <title>FlySnk - Principal</title>
   </head>
 </head>
 
 <body>
+
+  <div class="overlay"></div>
   <header>
     <div class="contenedor">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<!-- Sidebar -->
+<nav id="sidebar">
+  <div id="dismiss"><i class="fas fa-arrow-left"></i></div>
+
+  <div class="sidebar-header">
+    <h3>FlySnk</h3>
+  </div>
+
+  <ul class="list-unstyled components">
+    <li class="active"><a href="index.html">Home</a></li>
+    <li><a href="general.html">Footwear</a></li>
+    <li><a href="release.html">Snk Release</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <ul class="list-unstyled components login">
+    <li><a href="login.html">Login</a></li>
+  </ul>
+</nav>
+
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
           aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -54,13 +78,44 @@
           </form>
         </div>
 
-        <div id="cart-container">
-          <div id="cart">
-            <!--<i class="fa fa-shopping-cart fa-2x openCloseCart" aria-hidden="true"></i>-->
-            <i><img src="img/if_cart_1543351.png" /></i>
-          </div>
-          <span id="itemCount"></span>
+        <!-- basket -->
+        <label id='basket-icon'><i><img src="img/if_cart.png" /></i></label>
+        <div id="basket">
+            <div id="products">
+                
+                
+                <ul>
+                    <li>
+                        <div id="image">
+                            <img src="img/700.jpg" alt="">
+                        </div>
+                        <div id="info">
+                            <p>Producto que mola mil</p>
+                            <div class="space-between" id="details">
+                                <p>Cantidad 2</p>
+                                <p>99,99 €</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+               
+
+            </div>
+            <div id="buyIt">
+                <div class="space-between" id="total">
+                    <div id="units">
+                        <p>2 unidades</p>
+                    </div>
+                    <div id="totalPrice">
+                        <p>Total: <span id="price">198,98</span> €</p>
+                    </div>
+                </div>
+                <input type="button" value="REALIZAR PEDIDO">
+            </div>
         </div>
+        <!-- /basket -->
+        
       </nav>
     </div>
   </header>
@@ -198,7 +253,6 @@
     <p style="margin-top: 10px;">Copyright (C) 2018 FlySnk All Rights Reserved</p>
 
   </footer>
-
 
 </body>
 
