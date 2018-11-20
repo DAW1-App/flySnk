@@ -278,6 +278,7 @@ a.article:hover {
     font-weight: 600;
     background-color: #f99;
     transition: all .3s;
+    cursor: pointer;
 }
 
 #basket #buyIt input:hover {
