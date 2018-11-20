@@ -145,3 +145,11 @@ nav form button:hover > a {
     width: 2rem !important;
     height: 2rem !important;
 }
+
+
+/*error messages*/
+.error {
+    text-align: center;
+    font-weight: 200;
+    margin: 5em 0;
+}

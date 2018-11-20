@@ -9,6 +9,9 @@
         });
 
         function loadCards(zapatillas) {
+
+            if (zapatillas.length != 0)  {
+
                 var list = $("<ul />", { class: "flex-container" });
 
                 zapatillas.forEach(zapatilla => {
@@ -33,6 +36,14 @@
                     }
                 });
                 $("#stock").append(list);
+            } else {
+                var error =  $("<h4>",  {
+                    text:  "Whoops, We've lost those in translation",
+                    class: "error"
+                });
+                $("#stock").append(error);
+            }
+
         }
 
         function GetURLParameter(sParam) {
