@@ -1,0 +1,155 @@
+body {
+    background-color: #dcdcdc;
+}
+
+nav a {
+    font-weight: 400;
+}
+
+header nav, header nav form {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+header ul {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contenedor {
+    max-width: 980px;
+}
+
+.contenedor {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.carrousel2 {
+    margin-right: 30px;
+}
+
+/* Retoques navbar */
+/* Hackovo te ha HACKEADO*/
+/* hacking.hacks() */
+
+nav .btn.btn-outline-success.my-2.my-sm-0:last-child {
+    margin-left: 10px;
+}
+
+nav form button > a {
+    text-decoration: none !important;
+    color: #28a745;
+}
+
+nav form button:hover > a {
+    color: white;
+}
+
+.contenedor:first-child > .row.row-up {
+    margin-top: 0px !important;
+}
+
+/* Retoques about us */
+
+#aboutUs-div {
+    width: 90% !important;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: relative;
+}
+
+#aboutUs-div .contenedor {
+    margin: 40px;
+}
+
+#aboutUs-div > .first > h2 {
+    text-align: center;
+}
+#aboutUs-div div.text p {
+    text-align: justify;
+}
+
+#aboutUs-div #about_underline {
+    width: 6em;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 5em;
+    border-bottom: 2px solid black;
+}
+
+@media (min-width: 991px) {
+    #aboutUs-div .content {
+        display: flex;
+    }
+
+    #aboutUs-div div.text {
+        margin-left: 2em;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .text p {
+        width: 100% !important;
+    }
+    #aboutUs-div .content {
+        display: table;
+    }
+
+    #aboutUs-div .img {
+        margin-bottom: 2em;
+    }
+}
+
+.footerSk {
+    text-align: center;
+    border-top: 2px solid white;
+}
+
+
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 500px;
+    margin: 1rem;
+    position: relative;
+}
+
+.demo-card-square.mdl-card:hover {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+.mdl-card__title img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.mdl-card__actions.mdl-card--border a{
+    text-decoration: none;
+}
+
+#cart-container{
+    margin-left: .7rem;
+}
+
+#cart img{
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+
+/*error messages*/
+.error {
+    text-align: center;
+    font-weight: 200;
+    margin: 5em 0;
+}
