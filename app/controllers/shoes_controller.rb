@@ -25,6 +25,7 @@ class ShoesController < ApplicationController
   # POST /shoes.json
   def create
     @shoe = Shoe.new(shoe_params)
+    @shoe.image.attach(params[:shoe][:image])
 
     respond_to do |format|
       if @shoe.save
@@ -69,6 +70,6 @@ class ShoesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shoe_params
-      params.fetch(:shoe, {})
+        params.require(:shoe).permit(:image, :brand, :color, :model, :price, :releaseDate, :info)
     end
 end

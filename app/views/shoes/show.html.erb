@@ -1,7 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<%= @shoe.brand %>
+<br>
+<%= @shoe.info %>
+<br>
+
+<% if @shoe.image.attached? %>
+  <%= image_tag @shoe.image %>
+<% end %>
+<br>
+<br>
+
 <%= link_to 'Edit', edit_shoe_path(@shoe) %> |
 <%= link_to 'Back', shoes_path %>
-<%= @shoe.brand %>
-<%= @shoe.info %>
-
