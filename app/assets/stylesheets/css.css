@@ -37,7 +37,7 @@ header ul {
 /* Hackovo te ha HACKEADO*/
 /* hacking.hacks() */
 
-nav .btn.btn-outline-success.my-2.my-sm-0:last-child {
+nav .btn.my-2.my-sm-0:last-child {
     margin-left: 10px;
 }
 

@@ -12,3 +12,14 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+#
+# TODO para poder usar css's de la carpeta stylesheets en las vistas individualmente
+Rails.application.config.assets.precompile += %w( login.css )
+Rails.application.config.assets.precompile += %w( carousel.css )
+
+Rails.application.config.assets.precompile += %w( login_validation.js )
+Rails.application.config.assets.precompile += %w( jquery.validate.js )
+Rails.application.config.assets.precompile += %w( validator.js )
+
+
+
