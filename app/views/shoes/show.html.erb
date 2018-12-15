@@ -11,5 +11,10 @@
 <br>
 <br>
 
-<%= link_to 'Edit', edit_shoe_path(@shoe) %> |
+<% if user_signed_in? %>
+  <% if current_user.username == "admin" %>
+    <%= link_to 'Edit', edit_shoe_path(@shoe) %>
+  <% end %>
+<% end %>
+
 <%= link_to 'Back', shoes_path %>

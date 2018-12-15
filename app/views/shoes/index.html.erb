@@ -12,10 +12,14 @@
   <tbody>
     <% @shoes.each do |shoe| %>
       <tr>
-        <td><%= link_to 'Show', shoe %></td>
-        <td><%= shoe.brand %></td>
-        <td><%= link_to 'Edit', edit_shoe_path(shoe) %></td>
-        <td><%= link_to 'Destroy', shoe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to shoe.brand, shoe %></td>
+<!--        <td><%#= shoe.brand %></td>-->
+        <% if user_signed_in? %>
+          <% if current_user.username == "admin" %>
+            <td><%= link_to 'Edit', edit_shoe_path(@shoe) %></td>
+            <td><%= link_to 'Destroy', shoe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
