@@ -4,10 +4,10 @@ $(document).ready(function() {
 });
 
 function addListeners() {
-    checkFields($("#sign-up-user"), user_validation);       // function as param
-    checkFields($("#sign-up-pass1"), password_validation);
-    checkFields($("#email"), email_validation);
-    checkPasswordsLive($("#sign-up-pass1"), $("#sign-up-pass2"));
+    checkFields($("#user_username"), user_validation);       // function as param
+    checkFields($("#user_email"), email_validation);
+    checkFields($("#user_pass"), password_validation);
+    checkPasswordsLive($("#user_pass"), $("#user_pass_confirmation"));
 }
 
 function checkFields(input, validation) {

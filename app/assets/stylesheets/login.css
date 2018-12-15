@@ -1,10 +1,3 @@
-body {
-    margin: 0;
-    color: #1032f5;
-    background: #000000;
-    font: 600 16px/18px "Open Sans", sans-serif;
-}
-
 *,
 :after,
 :before {
@@ -221,7 +214,7 @@ a {
 
 .hr {
     height: 2px;
-    margin: 60px 0 50px 0;
+    margin: 170px 0 50px 0;
     background: rgba(255, 255, 255, 0.2);
 }
 

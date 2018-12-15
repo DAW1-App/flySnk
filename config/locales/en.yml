@@ -36,3 +36,4 @@ en:
     attributes:
       user:
         login: "Username or email"
+        password_confirmation: "Repeat your password"

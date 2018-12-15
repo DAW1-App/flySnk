@@ -20,6 +20,8 @@ Rails.application.config.assets.precompile += %w( carousel.css )
 Rails.application.config.assets.precompile += %w( login_validation.js )
 Rails.application.config.assets.precompile += %w( jquery.validate.js )
 Rails.application.config.assets.precompile += %w( validator.js )
+Rails.application.config.assets.precompile += %w( sweetalert2.all.min.js )
+Rails.application.config.assets.precompile += %w( sweetAlerts.js )
 
 
 
