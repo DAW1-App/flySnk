@@ -74,11 +74,5 @@ ActiveRecord::Schema.define(version: 2018_12_14_142746) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  create_table "userss", primary_key: "userID", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "userName", limit: 20, null: false
-    t.string "encrypted_password", limit: 200
-    t.string "email", limit: 50, null: false
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end
