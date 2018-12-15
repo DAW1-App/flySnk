@@ -16,6 +16,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # TODO para poder usar css's de la carpeta stylesheets en las vistas individualmente
 Rails.application.config.assets.precompile += %w( login.css )
 Rails.application.config.assets.precompile += %w( carousel.css )
+Rails.application.config.assets.precompile += %w( card.css )
 
 Rails.application.config.assets.precompile += %w( login_validation.js )
 Rails.application.config.assets.precompile += %w( jquery.validate.js )

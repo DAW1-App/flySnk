@@ -13,13 +13,13 @@
 
 
 
-  <%= form.text_field :brand, {value: "shoe to flama", placeholder: "Marca", class: "form-control"} %>
-  <%= form.text_field :color, {value: "color to flama", placeholder: "Color", class: "form-control"} %>
-  <%= form.text_field :model, {value: "modelo to flama", placeholder: "Modelo", class: "form-control"} %>
-  <%= form.text_field :price, {value: "5", placeholder: "Precio", class: "form-control"} %>
-  <%= form.text_field :releaseDate, {value: "7/7/7", placeholder: "Fecha de salida", class: "form-control"} %>
+  <%= form.text_field :brand, {placeholder: "Marca", class: "form-control"} %>
+  <%= form.text_field :color, {placeholder: "Color", class: "form-control"} %>
+  <%= form.text_field :model, {placeholder: "Modelo", class: "form-control"} %>
+  <%= form.text_field :price, {placeholder: "Precio", class: "form-control"} %>
+  <%= form.text_field :releaseDate, {placeholder: "Fecha de salida (dd/mm/yyyy)", class: "form-control"} %>
 
-  <%= form.text_area :info, {value: "algo flama to flama", placeholder: "Escribe el artículo", class: "form-control"} %>
+  <%= form.text_area :info, {placeholder: "tirame datos del sneaker niño", class: "form-control"} %>
   <%= form.file_field :image %>
 
   <%= form.submit buttonText, {class: "btn btn-primary"} %>

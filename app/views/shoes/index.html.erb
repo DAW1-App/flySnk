@@ -1,36 +1,31 @@
-<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "card" %>
 
-<h1>Shoes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="contenedor">
+  <p id="notice"><%= notice %></p>
+  <ul class="flex-container">
     <% @shoes.each do |shoe| %>
-      <tr>
-        <td><%= link_to shoe.brand, shoe %></td>
-<!--        <td><%#= shoe.brand %></td>-->
-        <% if user_signed_in? %>
-          <% if current_user.username == "admin" %>
-            <td><%= link_to 'Edit', edit_shoe_path(@shoe) %></td>
-            <td><%= link_to 'Destroy', shoe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <li class="flex-item">
+        <div class="card">
+          <%= link_to shoe, :action => 'go' do %>
+            <% if shoe.image.attached? %>
+              <%= image_tag shoe.image, style: "width:100%" %>
+            <% end %>
+            <div class="container">
+              <h4><%= shoe.brand %></h4>
+              <p><%= shoe.model %></p>
+            </div>
           <% end %>
-        <% end %>
-      </tr>
+        </div>
+      </li>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+  </ul>
 
-<%= link_to 'New Shoe', new_shoe_path %>
-<br>
-<br>
-<%= button_tag "alert testin", type: :button, onclick: "getFormValues();", class: "btn btn-secondary" %>
+  <%= link_to 'New Shoe', new_shoe_path %>
+  <br>
+  <br>
+  <%= button_tag "alert testin", type: :button, onclick: "getFormValues();", class: "btn btn-secondary" %>
+</div>
 
 <%= javascript_include_tag "sweetalert2.all.min" %>
 <%= javascript_include_tag "sweetAlerts" %>

@@ -12,7 +12,7 @@
         <%= link_to "FlySnk", root_path, class: "navbar-brand" %>
       </li>
 
-      <li><a href="general.html">Footwear</a></li>
+      <li><%= link_to "Footwear", shoes_path, class: "nav-link" + current?(shoes_path) %></li>
       <li><a href="release.html">Snk Release</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
