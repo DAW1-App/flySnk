@@ -31,7 +31,9 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active active">
-          <a class="nav-link" href="general.html"> Footwear<span class="sr-only">(current)</span></a>
+
+          <%= link_to "Footwear", shoes_path, class: "nav-link" + current?(shoes_path) %>
+
         </li>
         <li class="nav-item active active">
           <a class="nav-link" href="release.html">Snk Release<span class="sr-only">(current)</span></a>

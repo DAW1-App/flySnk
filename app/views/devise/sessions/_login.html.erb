@@ -1,0 +1,28 @@
+<%= form_for resource, as: resource_name, url: session_path(resource_name), html: {class: "needs-validation", "data-toggle": "validator", novalidate: "true"} do |f| %>
+
+  <%= tag.div class: 'group' do %>
+    <%= f.label :login, class: "label" %>
+    <%= f.text_field :login, autofocus: true, autocomplete: "username", class: "input form-control", :required => true %>
+    <%= tag.div class: 'invalid-tooltip' do %>I need a username
+    <% end %>
+  <% end %>
+
+  <%= tag.div class: 'group' do %>
+    <%= f.label :password, class: "label" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "input form-control", "data-type": "password", :required => true %>
+    <%= tag.div class: 'invalid-tooltip' do %>And a password
+    <% end %>
+  <% end %>
+
+  <%= tag.div class: 'space' %>
+  <%= tag.div class: 'group' do %>
+    <%= f.submit "Sign in", class: "button" %>
+  <% end %>
+
+<% end %>
+
+
+<%= tag.div class: 'hr' %>
+<%= tag.div class: 'foot-lnk' do %>
+  <%= link_to "Forgot password?", "#forgot" %>
+<% end %>
