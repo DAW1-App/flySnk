@@ -4,7 +4,7 @@ class ShoesController < ApplicationController
   # GET /shoes
   # GET /shoes.json
   def index
-    @shoes = Shoe.all
+    @shoes = Shoe.search(params[:term])
   end
 
   # GET /shoes/1
@@ -70,6 +70,6 @@ class ShoesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shoe_params
-        params.require(:shoe).permit(:image, :brand, :color, :model, :price, :releaseDate, :info)
+        params.require(:shoe).permit(:image, :brand, :color, :model, :price, :releaseDate, :info, :term)
     end
 end
