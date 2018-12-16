@@ -1,7 +1,6 @@
 <%= stylesheet_link_tag "card" %>
 
 <div class="contenedor">
-  <p id="notice"><%= notice %></p>
   <ul class="flex-container">
     <% @shoes.each do |shoe| %>
       <li class="flex-item">
@@ -20,6 +19,8 @@
     <% end %>
 
   </ul>
+
+
 
   <%= link_to 'New Shoe', new_shoe_path %>
 <!--  <br>

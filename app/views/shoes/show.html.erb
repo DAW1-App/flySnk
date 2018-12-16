@@ -1,20 +1,59 @@
-<p id="notice"><%= notice %></p>
+<div class="contenedor">
+  <div class="row row-up">
+    <% if user_signed_in? && current_user.id == 1 %>
+        <%= link_to 'Edit', edit_shoe_path(@shoe), class: 'row-up btn btn-primary btn-block' %>
+    <% end %>
+  </div>
+  <div class="row row-up">
+    <% if @shoe.image.attached? %>
+      <div class="col-sm-6">
+        <%= image_tag @shoe.image, alt: @shoe.model, class: "d-block mx-auto rounded img-fluid" %>
+      </div>
+    <% end %>
 
-<%= @shoe.brand %>
-<br>
-<%= @shoe.info %>
-<br>
+    <div class="col-sm-6 prueba">
+      <ul class="lista">
+        <li>
+          <h2 class="mx-auto"><%= @shoe.brand %> <%= @shoe.model %></h2>
+        </li>
+        <li>
+          <h2>
+            <small><%= @shoe.price %>€</small>
+          </h2>
+        </li>
+        <li>
+          <h3><small>Sizes Available</small></h3>
+        </li>
+        <li>
+          <div class="separador btn-group w-100">
+            <button type="button" class="btn btn-primary w-100"> 36 </button>
+            <button type="button" class="btn btn-primary w-100"> 37 </button>
+            <button type="button" class="btn btn-primary w-100"> 38 </button>
+            <button type="button" class="btn btn-primary w-100"> 39 </button>
+            <button type="button" class="btn btn-primary w-100"> 40 </button>
+            <button type="button" class="btn btn-primary w-100"> 41 </button>
+          </div>
+        </li>
+        <li>
+          <div class="separador btn-group w-100">
+            <button type="button" class="btn btn-primary w-100"> 42 </button>
+            <button type="button" class="btn btn-primary w-100"> 43 </button>
+            <button type="button" class="btn btn-primary w-100"> 44 </button>
+            <button type="button" class="btn btn-primary w-100"> 45 </button>
+            <button type="button" class="btn btn-primary w-100"> 46 </button>
+            <button type="button" class="btn btn-primary w-100"> 47 </button>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="row-up btn btn-primary btn-block">Comprar</button>
+        </li>
+      </ul>
+    </div>
 
-<% if @shoe.image.attached? %>
-  <%= image_tag @shoe.image %>
-<% end %>
-<br>
-<br>
+  </div>
+  <div class="row row-up">
+    <p style="text-align: center; width: 100%"><%= @shoe.info %></p>
+  </div>
+</div>
 
-<% if user_signed_in? %>
-  <% if current_user.username == "admin" %>
-    <%= link_to 'Edit', edit_shoe_path(@shoe) %>
-  <% end %>
-<% end %>
-
-<%= link_to 'Back', shoes_path %>
+<%#= link_to 'Back', shoes_path %>
