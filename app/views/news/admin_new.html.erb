@@ -1,0 +1,46 @@
+<div class="contenedor">
+  <div class="profile">
+    <h2 style="text-align: center">News</h2>
+    <div class="container">
+      <div id="center-row" class="row" >
+        <div class="col-xs-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Shoe Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Created</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @news.each do |news| %>
+                <tr>
+                  <% if news.shoeName? %>
+                    <td><%= news.shoeName %></td>
+                  <% end %>
+                  <% if news.price? %>
+                    <td><%= news.price %></td>
+                  <% end %>
+                  <% if news.color? %>
+                    <td><%= news.color %></td>
+                  <% end %>
+                  <td><%= news.created_at %></td>
+                  <td>
+                    <button type="button" class="btn btn-warning">Success</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                  </td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <button type="button" class="btn btn-success">Add News</button>
+    </div>
+  </div>
+</div>

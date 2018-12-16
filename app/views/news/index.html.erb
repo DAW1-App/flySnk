@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "card" %>
+<%= stylesheet_link_tag "material/icon" %>
+<%= stylesheet_link_tag "material/material.blue-orange.min" %>
+
+<div class="contenedor">
+  <h1>News</h1>
+  <div class="flex-container">
+    <!-- Square card -->
+    <% @news.each do |news| %>
+      <div class="mdl-card mdl-shadow--2dp demo-card-square">
+        <div class="mdl-card__title mdl-card--expand">
+          <% if news.images.attached? %>
+            <% news.images.first(1).each do |image| %>
+              <%= image_tag image, style: 'width: 100%' %> <br />
+            <% end %>
+          <% end %>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <% if news.shoeName? %>
+            <p><strong>Name: <%= news.shoeName %></strong></p>
+          <% end %>
+          <% if news.releaseDate? %>
+            <p>Release Date: <%= news.releaseDate %></p>
+          <% end %>
+          <% if news.price? %>
+            <p>Price: <%= news.price %>€</p>
+          <% end %>
+          <% if news.color? %>
+            <p>Color: <%= news.color %></p>
+          <% end %>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <%= link_to 'Details', news %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

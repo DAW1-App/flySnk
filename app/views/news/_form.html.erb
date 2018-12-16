@@ -1,0 +1,60 @@
+<%= form_with(model: news, local: true) do |form| %>
+  <% if news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="contenedor">
+    <div class="profile">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+              <%= form.label :shoeName %>
+              <%= form.text_field :shoeName, class: "form-control", id: "News_Name" %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+              <%= form.label :smallText %>
+              <%= form.text_field :smallText, class: "form-control", id: "ShortDecript" %>
+          </div>
+          <div class="form-group col-md-6">
+              <%= form.label :largeText %>
+              <%= form.text_field :largeText, class: "form-control", id: "LongDescript" %>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="exampleFormControlFile1">Images</label>
+          <%= form.file_field :images, multiple: true, class: "form-control-file"%>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <%= form.label :releaseDate %>
+            <%= form.datetime_select :releaseDate, class: "form-control", id: "Sneaker_date" %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <%= form.label :price %>
+            <%= form.text_field :price, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <%= form.label :color %>
+            <%= form.text_field :color, class: "form-control", id: "Sneaker_Color", placeholder: "Sneaker Color" %>
+          </div>
+
+<!--          <button type="submit" class="btn btn-primary" style="margin-left: 820px;">Add New</button>-->
+          <%= form.submit%>
+    </div>
+  </div>
+  </div>
+<% end %>

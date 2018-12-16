@@ -17,6 +17,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( login.css )
 Rails.application.config.assets.precompile += %w( carousel.css )
 Rails.application.config.assets.precompile += %w( card.css )
+Rails.application.config.assets.precompile += %w( material/icon.css )
+Rails.application.config.assets.precompile += %w( material/material.blue-orange.min.css )
 
 Rails.application.config.assets.precompile += %w( login_validation.js )
 Rails.application.config.assets.precompile += %w( jquery.validate.js )

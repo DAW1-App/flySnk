@@ -13,7 +13,7 @@
       </li>
 
       <li><%= link_to "Footwear", shoes_path, class: "nav-link" + current?(shoes_path) %></li>
-      <li><a href="release.html">Snk Release</a></li>
+      <li><%= link_to "Snk Release", news_index_path, class: "nav-link" + current?(news_index_path)%></li>
       <li><a href="about.html">About</a></li>
     </ul>
     <ul class="list-unstyled components login">
@@ -36,7 +36,7 @@
 
         </li>
         <li class="nav-item active active">
-          <a class="nav-link" href="release.html">Snk Release<span class="sr-only">(current)</span></a>
+          <%= link_to "Snk Release", news_index_path, class: "nav-link" + current?(news_index_path)%>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="about.html">About</a>
@@ -56,8 +56,11 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="profile.html">My Profile</a>
-            <%= link_to "Admin Stock",shoes_admin_shoe_path,class:"dropdown-item" %>
-            <a class="dropdown-item" href="admNews.html">Admin News</a>
+            <% if(current_user.id == 1) %>
+              <%= link_to "Admin Stock",shoes_admin_shoe_path,class:"dropdown-item" %>
+              <%#= link_to "Admin News",news_admin_news_path,class:"dropdown-item" %>
+              <a class="dropdown-item" href="admNews.html">Admin News</a>
+            <% end %>
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
           </div>
         </div>
