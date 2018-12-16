@@ -1,0 +1,45 @@
+<div class="contenedor">
+  <div class="profile">
+    <h2 style="text-align: center">Stock</h2>
+    <div class="container">
+      <div id="center-row" class="row" >
+        <div class="col-xs-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+              <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>IMG</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @shoes.each do |shoe| %>
+              <tr>
+                <td><%=  shoe.brand %></td>
+                <td><%=  shoe.price %></td>
+                <td><%=  shoe.color %></td>
+                <% if shoe.image.attached? %>
+                  <td><p>YES</p></td>
+                  <%else %>
+                  <td><p>NO</p></td>
+                <% end %>
+                <td>
+                  <button type="button" class="btn btn-warning">Success</button>
+                  <button type="button" class="btn btn-danger">Danger</button>
+                </td>
+              </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <button type="button" class="btn btn-success">Add New Sneaker</button>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,11 @@ class ShoesController < ApplicationController
   def show
   end
 
+  # GET /shoes/admin_shoe
+  # GET /shoes/admin_shoe
+  def admin_shoe
+    @shoes = Shoe.all
+  end
   # GET /shoes/new
   def new
     @shoe = Shoe.new

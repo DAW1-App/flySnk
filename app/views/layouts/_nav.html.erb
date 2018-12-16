@@ -56,9 +56,9 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="profile.html">My Profile</a>
-            <a class="dropdown-item" href="admStock.html">Admin Stock</a>
+            <%= link_to "Admin Stock",shoes_admin_shoe_path,class:"dropdown-item" %>
             <a class="dropdown-item" href="admNews.html">Admin News</a>
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
           </div>
         </div>
       <% else %>
