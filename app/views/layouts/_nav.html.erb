@@ -48,9 +48,19 @@
         <%= submit_tag 'Search', name: nil, class: "btn btn-outline-success my-2 my-sm-0" %>
       <% end %>
 
+
       <% if user_signed_in? %>
-        <h5><%= current_user.username %></h5>
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-danger my-2 my-sm-0" %>
+        <div class="dropdown">
+          <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+            <%= current_user.username %> <i class="fas fa-angle-down"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="profile.html">My Profile</a>
+            <a class="dropdown-item" href="admStock.html">Admin Stock</a>
+            <a class="dropdown-item" href="admNews.html">Admin News</a>
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+          </div>
+        </div>
       <% else %>
         <%= link_to "Login", new_user_session_path, class: "btn btn-outline-success my-2 my-sm-0" %>
       <% end %>

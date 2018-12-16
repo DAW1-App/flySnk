@@ -37,7 +37,7 @@ header ul {
 /* Hackovo te ha HACKEADO*/
 /* hacking.hacks() */
 
-nav .btn.my-2.my-sm-0:last-child {
+nav .btn.btn-outline-success.my-2.my-sm-0:last-child {
     margin-left: 10px;
 }
 
@@ -152,4 +152,29 @@ nav form button:hover > a {
     text-align: center;
     font-weight: 200;
     margin: 5em 0;
+}
+
+.profile{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+    position: relative;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+.search-control:focus {
+    width: 200px;
+}
+#center-row{
+    justify-content: center;
 }

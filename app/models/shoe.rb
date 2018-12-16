@@ -3,7 +3,7 @@ class Shoe < ApplicationRecord
 
   def self.search(term)
     if term
-      where('brand LIKE ? or model LIKE ? ORDER BY created_at', "%#{term}%", "%#{term}%")
+      where('brand LIKE ? or model LIKE ?', "%#{term}%", "%#{term}%")
     else
       all
     end

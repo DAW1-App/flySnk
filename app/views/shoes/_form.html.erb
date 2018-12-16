@@ -11,23 +11,73 @@
     </div>
   <% end %>
 
+  <div class="contenedor">
+    <div class="profile">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Sneaker Name</label>
+            <%= form.text_field :brand, {placeholder: "Marca", class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Sneaker Color</label>
+            <%= form.text_field :color, {placeholder: "Color", class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Sneaker Model</label>
+            <%= form.text_field :model, {placeholder: "Modelo", class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Sneaker Price €</label>
+            <%= form.text_field :price, {placeholder: "Precio", class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Sneaker Release Date</label>
+            <%= form.text_field :releaseDate, {placeholder: "Fecha de salida (dd/mm/yyyy)", class: "form-control"} %>
+          </div>
+        </div>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <label for="Sneaker_Price">Sizes</label>
+          <div class="separador btn-group w-100" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">37</button>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Sneaker Info</label>
+            <%= form.text_area :info, {placeholder: "tirame datos del sneaker niño", class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>IMG</label>
+            <%= form.file_field :image %>
+          </div>
+        </div>
+        <%= form.submit buttonText, {class: "btn btn-primary"} %>
+      </form>
+    </div>
+  </div>
 
 
-  <%= form.text_field :brand, {placeholder: "Marca", class: "form-control"} %>
-  <%= form.text_field :color, {placeholder: "Color", class: "form-control"} %>
-  <%= form.text_field :model, {placeholder: "Modelo", class: "form-control"} %>
-  <%= form.text_field :price, {placeholder: "Precio", class: "form-control"} %>
-  <%= form.text_field :releaseDate, {placeholder: "Fecha de salida (dd/mm/yyyy)", class: "form-control"} %>
+<!--  <%#= form.text_field :brand, {placeholder: "Marca", class: "form-control"} %>
+  <%#= form.text_field :color, {placeholder: "Color", class: "form-control"} %>
+  <%#= form.text_field :model, {placeholder: "Modelo", class: "form-control"} %>
+  <%#= form.text_field :price, {placeholder: "Precio", class: "form-control"} %>
+  <%#= form.text_field :releaseDate, {placeholder: "Fecha de salida (dd/mm/yyyy)", class: "form-control"} %>
 
-  <%= form.text_area :info, {placeholder: "tirame datos del sneaker niño", class: "form-control"} %>
-  <%= form.file_field :image %>
+  <%#= form.text_area :info, {placeholder: "tirame datos del sneaker niño", class: "form-control"} %>
+  <%#= form.file_field :image %>
 
-  <%= form.submit buttonText, {class: "btn btn-primary"} %>
-
-
-
-
-
+  <%#= form.submit buttonText, {class: "btn btn-primary"} %>-->
   <!--  <div class="actions">-->
   <%#= form.submit %>
   <!--  </div>-->
