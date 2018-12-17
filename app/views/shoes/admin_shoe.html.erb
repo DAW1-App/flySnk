@@ -1,50 +1,62 @@
 <% if user_signed_in? && current_user.id == 1 %>
   <div class="contenedor">
-  <div class="profile">
-    <h2 style="text-align: center">Stock</h2>
-    <div class="container">
-      <div id="center-row" class="row" >
-        <div class="col-xs-12">
-          <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-              <thead style="text-align: center">
-              <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Color</th>
-                <th>IMG</th>
-                <th>Action</th>
-              </tr>
-              </thead>
-              <tbody>
-              <% @shoes.each do |shoe| %>
-              <tr>
-                <td><%=  shoe.brand %></td>
-                <td><%=  shoe.price %></td>
-                <td><%=  shoe.color %></td>
-                <% if shoe.image.attached? %>
-                  <td><p>YES</p></td>
-                  <%else %>
-                  <td><p>NO</p></td>
+    <div class="profile">
+      <h2 style="text-align: center">Stock</h2>
+      <div class="container">
+        <div id="center-row" class="row">
+          <div class="col-xs-12">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead style="text-align: center">
+                <tr>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Color</th>
+                  <th>IMG</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% @shoes.each do |shoe| %>
+                  <tr>
+                    <td><%= shoe.brand %></td>
+                    <td><%= shoe.price %></td>
+                    <td><%= shoe.color %></td>
+                    <% if shoe.image.attached? %>
+                      <td><p>YES</p></td>
+                    <% else %>
+                      <td><p>NO</p></td>
+                    <% end %>
+                    <td>
+                      <%= link_to edit_shoe_path(shoe), class: "btn btn-warning" do %>
+                        <i class="far fa-edit"></i>
+                        Edit
+                      <% end %>
+                      <%= link_to shoe, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" do %>
+                        <i class="far fa-trash-alt"></i>
+                        Delete
+                      <% end %>
+                    </td>
+                  </tr>
                 <% end %>
-                <td>
-                  <%= link_to "Edit", edit_shoe_path(shoe), class:"btn btn-warning"%>
-                  <%= link_to "Delete",shoe, method: :delete,data: {confirm: "Are you sure?"},class: "btn btn-danger" %>
-                </td>
-              </tr>
-              <% end %>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div style="text-align: center">
-      <%= link_to "View all Sneakers",shoes_url, class:"btn btn-info"%>
-      <%= link_to "Add New Sneaker",new_shoe_path, class:"btn btn-success"%>
+      <div style="text-align: center">
+        <%= link_to shoes_url, class: "btn btn-info" do %>
+          <i class="far fa-images"></i>
+          View all Sneakers
+        <% end %>
+        <%= link_to new_shoe_path, class: "btn btn-success" do %>
+          <i class="fas fa-plus"></i>
+          Add New Sneaker
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-  <%else %>
+<% else %>
   <h2 style="text-align: center">What are u doing here????</h2>
 <% end %>

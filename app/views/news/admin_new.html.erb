@@ -1,58 +1,70 @@
 <% if user_signed_in? && current_user.id == 1 %>
   <div class="contenedor">
-  <div class="profile">
-    <h2 style="text-align: center">News</h2>
-    <div class="container">
-      <div id="center-row" class="row" >
-        <div class="col-xs-12">
-          <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-              <thead style="text-align: center">
-              <tr>
-                <th>Shoe Name</th>
-                <th>Price</th>
-                <th>Color</th>
-                <th>Created</th>
-                <th>Action</th>
-              </tr>
-              </thead>
-              <tbody>
-              <% @news.each do |news| %>
+    <div class="profile">
+      <h2 style="text-align: center">News</h2>
+      <div class="container">
+        <div id="center-row" class="row">
+          <div class="col-xs-12">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead style="text-align: center">
                 <tr>
-                  <% if news.shoeName? %>
-                    <td><%= news.shoeName %></td>
-                  <%else %>
-                    <td style="text-align: center"> - </td>
-                  <% end %>
-                  <% if news.price? %>
-                    <td><%= news.price %></td>
-                  <%else %>
-                    <td style="text-align: center"> - </td>
-                  <% end %>
-                  <% if news.color? %>
-                    <td><%= news.color %></td>
-                  <%else %>
-                    <td style="text-align: center"> - </td>
-                  <% end %>
-                  <td><%= news.created_at %></td>
-                  <td>
-                    <%= link_to "Edit", edit_news_path(news), class:"btn btn-warning"%>
-                    <%= link_to "Delete",news, method: :delete,data: {confirm: "Are you sure?"},class: "btn btn-danger" %>
-                  </td>
+                  <th>Shoe Name</th>
+                  <th>Price</th>
+                  <th>Color</th>
+                  <th>Created</th>
+                  <th>Action</th>
                 </tr>
-              <% end %>
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                <% @news.each do |news| %>
+                  <tr>
+                    <% if news.shoeName? %>
+                      <td><%= news.shoeName %></td>
+                    <% else %>
+                      <td style="text-align: center"> -</td>
+                    <% end %>
+                    <% if news.price? %>
+                      <td><%= news.price %></td>
+                    <% else %>
+                      <td style="text-align: center"> -</td>
+                    <% end %>
+                    <% if news.color? %>
+                      <td><%= news.color %></td>
+                    <% else %>
+                      <td style="text-align: center"> -</td>
+                    <% end %>
+                    <td><%= news.created_at %></td>
+                    <td>
+                      <%= link_to edit_news_path(news), class: "btn btn-warning" do %>
+                        <i class="far fa-edit"></i>
+                        Edit
+                      <% end %>
+                      <%= link_to news, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" do %>
+                        <i class="far fa-trash-alt"></i>
+                        Delete
+                      <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div style="text-align: center">
-      <%= link_to "View all News",news_index_path, class:"btn btn-info"%>
-      <%= link_to 'Add News', new_news_path, class: "btn btn-success" %>
+      <div style="text-align: center">
+        <%= link_to news_index_path, class: "btn btn-info" do %>
+          <i class="far fa-newspaper"></i>
+          View all News
+        <% end %>
+        <%= link_to new_news_path, class: "btn btn-success" do %>
+          <i class="fas fa-plus"></i>
+          Add News
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-<%else %>
+<% else %>
   <h2 style="text-align: center">What are u doing here????</h2>
 <% end %>
