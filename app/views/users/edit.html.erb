@@ -1,0 +1,17 @@
+<%= tag.div class: 'contenedor' do %>
+  <%= tag.div class: 'profile' do %>
+    <h2 class="text-center">Edit user</h2>
+    <%#= form_for(@user) do |f| %>
+    <%= form_for(@user, remote: true) do |f| %>
+      <%= render 'users/form', f: f %>
+    <% end %>
+  <% end %>
+
+
+
+  <%= tag.div class: 'space' %>
+
+<% end %>
+
+<%= javascript_include_tag "sweetalert2.all.min" %>
+<%= javascript_include_tag "sweetAlerts" %>

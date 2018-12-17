@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :news
   get 'shoes/admin_shoe'
   devise_for :users
+  resources :users
   root 'welcome#index'
   resources :shoes
   # get 'shoes#index'

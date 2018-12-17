@@ -1,0 +1,66 @@
+<%= tag.div class: 'form-row' do %>
+
+  <%= tag.div class: 'form-group col-md-6' do %>
+    <%= f.label :username, "UserName" %>
+    <%= f.text_field :username, class: "form-control" %>
+  <% end %>
+
+  <%= tag.div class: 'form-group col-md-6' do %>
+    <%= f.label :email %><br/>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+  <% end %>
+
+<% end %>
+
+
+
+
+<%= tag.div class: 'form-row' do %>
+
+  <%= tag.div class: 'form-group col-md-6' do %>
+    <%= f.label :password %> <br><i>(leave blank if you don't want to change it)</i><br/>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+    <% if @minimum_password_length %>
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  <% end %>
+
+  <%= tag.div class: 'form-group col-md-6' do %>
+    <br>
+    <%= f.label :password_confirmation %><br/>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+  <% end %>
+
+<% end %>
+
+
+<%= tag.div class: 'form-group' do %>
+  <%= f.label :address %><br/>
+  <%= f.text_field :address, autocomplete: "address", class: "form-control" %>
+<% end %>
+
+
+<%= tag.div class: 'form-row' do %>
+
+  <%= tag.div class: 'form-group col-md-6' do %>
+    <%= f.label :city %><br/>
+    <%= f.text_field :city, autocomplete: "city", class: "form-control" %>
+  <% end %>
+
+  <%= tag.div class: 'form-group col-md-3' do %>
+    <%= f.label :state %><br/>
+    <%= f.text_field :state, autocomplete: "state", class: "form-control" %>
+  <% end %>
+
+  <%= tag.div class: 'form-group col-md-3' do %>
+    <%= f.label :zip %><br/>
+    <%= f.number_field :zip, autocomplete: "zip", class: "form-control" %>
+  <% end %>
+
+<% end %>
+
+
+
+<%= f.submit "Update Profile", class: "btn btn-success float-right" %>
+<%= tag.div class: 'space' %>
+

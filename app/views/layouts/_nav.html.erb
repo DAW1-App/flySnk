@@ -57,6 +57,7 @@
             <% if (current_user.id == 1) %>
               <%= link_to "Admin Stock", shoes_admin_shoe_path, class: "dropdown-item" %>
               <%= link_to "Admin News", news_admin_new_path, class: "dropdown-item" %>
+              <%= link_to "Admin Users", users_path, class: "dropdown-item" %>
             <% end %>
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
