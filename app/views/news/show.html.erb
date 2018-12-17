@@ -1,44 +1,38 @@
-<p id="notice"><%= notice %></p>
-
 <% if @news.images.attached? %>
   <% n = 0 %>
   <%= div_for @news.images do |image| %>
     <% n += 1 %>
     <%= tag.div class: 'col-sm-6' do %>
-      <%= image_tag image, alt: @news.shoeName + n.to_s , class: "d-block mx-auto rounded img-fluid" %>
+      <main>
+        <article>
+          <header>
+            <div id="imageWrapper"><%= image_tag image, alt: @news.shoeName + n.to_s , class: "d-block mx-auto rounded img-fluid" %></div>
+            <p><strong>Shoename:</strong> <%= @news.shoeName %><br>
+              <strong>Smalltext:</strong> <%= @news.smallText %><br>
+              <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
+              <strong>Price:</strong> <%= @news.price %> <br>
+              <strong>Color:</strong> <%= @news.color %><br>
+              <strong>Largetext:</strong> <%= @news.largeText %>
+          </header>
+        </article>
+      </main>
     <% end %>
   <% end %>
-<% end %>
+<%else %>
+  <main>
+    <article>
+      <header>
+        <p><strong>Shoename:</strong> <%= @news.shoeName %><br>
+          <strong>Smalltext:</strong> <%= @news.smallText %><br>
+          <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
+          <strong>Price:</strong> <%= @news.price %> <br>
+          <strong>Color:</strong> <%= @news.color %><br>
+          <strong>Largetext:</strong> <%= @news.largeText %>
+      </header>
+    </article>
+  </main>
 
-<p>
-  <strong>Shoename:</strong>
-  <%= @news.shoeName %>
-</p>
 
-<p>
-  <strong>Smalltext:</strong>
-  <%= @news.smallText %>
-</p>
 
-<p>
-  <strong>Largetext:</strong>
-  <%= @news.largeText %>
-</p>
 
-<p>
-  <strong>Releasedate:</strong>
-  <%= @news.releaseDate %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @news.price %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @news.color %>
-</p>
-
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%end%>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_205212) do
+ActiveRecord::Schema.define(version: 2018_12_16_221957) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -42,18 +42,6 @@ ActiveRecord::Schema.define(version: 2018_12_16_205212) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "newsss", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "shoesName", limit: 200, null: false
-    t.string "smallText", limit: 200
-    t.string "largeText", limit: 1000
-    t.binary "preview1"
-    t.binary "preview2"
-    t.binary "preview3"
-    t.datetime "releaseDate"
-    t.integer "price"
-    t.string "color", limit: 64
   end
 
   create_table "shoes", primary_key: "shoesID", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|

@@ -16,53 +16,49 @@
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label>Sneaker Name</label>
+            <label><strong>Sneaker Name</strong></label>
             <%= form.text_field :brand, {placeholder: "Marca", class: "form-control"} %>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label>Sneaker Color</label>
-            <%= form.text_field :color, {placeholder: "Color", class: "form-control"} %>
+            <label><strong>Sneaker Color</strong></label>
+            <%= form.text_area :color, {placeholder: "Color", class: "form-control"} %>
           </div>
-        </div>
-        <div class="form-row">
           <div class="form-group col-md-6">
-            <label>Sneaker Model</label>
+            <label><strong>Sneaker Model</strong></label>
             <%= form.text_field :model, {placeholder: "Modelo", class: "form-control"} %>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label>Sneaker Price €</label>
-            <%= form.text_field :price, {placeholder: "Precio", class: "form-control"} %>
+            <label><strong>Sneaker Price €</strong></label>
+            <%= form.text_field :price, {placeholder: "Precio €", class: "form-control"} %>
           </div>
-        </div>
-        <div class="form-row">
           <div class="form-group col-md-6">
-            <label>Sneaker Release Date</label>
-            <%= form.text_field :releaseDate, {placeholder: "Fecha de salida (dd/mm/yyyy)", class: "form-control"} %>
+            <label><strong>Sneaker Release Date</strong></label>
+            <%= form.date_field :releaseDate, {placeholder: "Fecha de salida (dd/mm/yyyy)", class: "form-control"} %>
           </div>
         </div>
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-          <label for="Sneaker_Price">Sizes</label>
+          <label for="Sneaker_Price"><strong>Sizes</strong></label>
           <div class="separador btn-group w-100" role="group" aria-label="First group">
             <button type="button" class="btn btn-secondary">37</button>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label>Sneaker Info</label>
+            <label><strong>Sneaker Info</strong></label>
             <%= form.text_area :info, {placeholder: "tirame datos del sneaker niño", class: "form-control"} %>
           </div>
-        </div>
-        <div class="form-row">
           <div class="form-group col-md-6">
-            <label>IMG</label>
-            <%= form.file_field :image %>
+            <label><strong>IMG</strong></label>
+            <%= form.file_field :image,class: "form-control-file" %>
           </div>
         </div>
-        <%= form.submit buttonText, {class: "btn btn-primary"} %>
+        <br><br>
+        <%= link_to "Back to Admin Stock", shoes_admin_shoe_path, class: "btn btn-info " %>
+        <%= form.submit buttonText, {class: "btn btn-primary float-right "} %>
       </form>
     </div>
   </div>

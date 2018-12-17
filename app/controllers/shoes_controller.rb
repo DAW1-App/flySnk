@@ -34,7 +34,7 @@ class ShoesController < ApplicationController
 
     respond_to do |format|
       if @shoe.save
-        format.html { redirect_to @shoe, notice: 'Shoe was successfully created.' }
+        format.html { redirect_to shoes_admin_shoe_path, notice: 'Shoe was successfully created.' }
         format.json { render :show, status: :created, location: @shoe }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class ShoesController < ApplicationController
   def update
     respond_to do |format|
       if @shoe.update(shoe_params)
-        format.html { redirect_to @shoe, notice: 'Shoe was successfully updated.' }
+        format.html { redirect_to shoes_admin_shoe_path, notice: 'Shoe was successfully updated.' }
         format.json { render :show, status: :ok, location: @shoe }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class ShoesController < ApplicationController
   def destroy
     @shoe.destroy
     respond_to do |format|
-      format.html { redirect_to shoes_url, notice: 'Shoe was successfully destroyed.' }
+      format.html { redirect_to shoes_admin_shoe_path, notice: 'Shoe was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

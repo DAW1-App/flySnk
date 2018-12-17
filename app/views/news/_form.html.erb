@@ -13,48 +13,50 @@
 
   <div class="contenedor">
     <div class="profile">
+      <form>
         <div class="form-row">
           <div class="form-group col-md-6">
-              <%= form.label :shoeName %>
-              <%= form.text_field :shoeName, class: "form-control", id: "News_Name" %>
+            <label for="News_Name"><strong>News Name</strong></label>
+            <%= form.text_field :shoeName, class: "form-control", id: "News_Name" %>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-              <%= form.label :smallText %>
-              <%= form.text_field :smallText, class: "form-control", id: "ShortDecript" %>
+            <label for="ShortDecript"><strong>Short Decription</strong></label>
+            <%= form.text_area :smallText, class: "form-control", id: "ShortDecript" %>
           </div>
           <div class="form-group col-md-6">
-              <%= form.label :largeText %>
-              <%= form.text_field :largeText, class: "form-control", id: "LongDescript" %>
-          </div>
-        </div>
-        <div class="form-row">
-          <label for="exampleFormControlFile1">Images</label>
-          <%= form.file_field :images, multiple: true, class: "form-control-file"%>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <%= form.label :releaseDate %>
-            <%= form.datetime_select :releaseDate, class: "form-control", id: "Sneaker_date" %>
+            <label for="LongDecript"><strong>Long Decription</strong></label>
+            <%= form.text_area :largeText, class: "form-control", id: "LongDescript" %>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <%= form.label :price %>
-            <%= form.text_field :price, class: "form-control" %>
+            <label for="exampleFormControlFile1"><strong>IMG</strong></label>
+            <%= form.file_field :images, multiple: true, class: "form-control-file"%>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="Sneaker_Date"><strong>Sneaker Release Date</strong></label>
+            <%= form.date_field :releaseDate, class: "form-control", id: "Sneaker_date" %>
           </div>
         </div>
-
+        <br>
         <div class="form-row">
           <div class="form-group col-md-6">
-            <%= form.label :color %>
+            <label for="Sneaker_Price"><strong>Sneaker Price €</strong></label>
+            <%= form.text_field :price, class: "form-control",placeholder: "Sneaker Price €"%>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="Sneaker_Color"><strong>Sneaker Color</strong></label>
             <%= form.text_field :color, class: "form-control", id: "Sneaker_Color", placeholder: "Sneaker Color" %>
           </div>
+        </div>
+        <br>
+        <br>
+        <%= link_to "Back to Admin News", news_admin_new_path, class: "btn btn-info" %>
+        <%= form.submit buttonText, {class: "btn btn-primary float-right "} %>
+      </form>
 
-<!--          <button type="submit" class="btn btn-primary" style="margin-left: 820px;">Add New</button>-->
-          <%= form.submit%>
     </div>
-  </div>
   </div>
 <% end %>
