@@ -21,12 +21,18 @@
                 <tr>
                   <% if news.shoeName? %>
                     <td><%= news.shoeName %></td>
+                  <%else %>
+                    <td style="text-align: center"> - </td>
                   <% end %>
                   <% if news.price? %>
                     <td><%= news.price %></td>
+                  <%else %>
+                    <td style="text-align: center"> - </td>
                   <% end %>
                   <% if news.color? %>
                     <td><%= news.color %></td>
+                  <%else %>
+                    <td style="text-align: center"> - </td>
                   <% end %>
                   <td><%= news.created_at %></td>
                   <td>

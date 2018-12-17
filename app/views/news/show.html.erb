@@ -5,16 +5,16 @@
         <article>
           <p>
             <%if @news.images.attached?%>
-                <strong>Smalltext:</strong> <%= @news.smallText %><br>
+                <%= @news.smallText %><br>
                 <% @news.images.first(1).each do |image| %>
                   <div id="imageWrapper"><%= image_tag image, alt: @news.shoeName , class: "d-block mx-auto rounded img-fluid" %></div>
                 <%end %>
                   <p>
-                    <strong>Shoename:</strong> <%= @news.shoeName %><br>
+                    <strong><%= @news.shoeName %></strong><br>
                     <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
-                    <strong>Price:</strong> <%= @news.price %> <br>
+                    <strong>Price:</strong> <%= @news.price %>€<br>
                     <strong>Color:</strong> <%= @news.color %><br>
-                    <strong>Largetext:</strong> <%= @news.largeText %>
+                    <%= @news.largeText %>
                   </p>
                   <%index = 1 %>
                   <% @news.images.each do |image| %>
@@ -24,6 +24,5 @@
                     <% index = index + 1 %>
                   <%end %>
             <% end %>
-          </header>
         </article>
       </main>

@@ -1,70 +1,74 @@
-<% rows = ["UserName", "Email", "Address", "City", "State", "Zip", "Action"] %>
+<% if user_signed_in? && current_user.id == 1 %>
+  <% rows = ["UserName", "Email", "Address", "City", "State", "Zip", "Action"] %>
 
-<%= tag.div class: 'contenedor' do %>
-  <%= tag.div class: 'profile' do %>
-    <%= tag.h2 'Users', class: "text-center" %>
-    <%= tag.div class: 'container' do %>
+  <%= tag.div class: 'contenedor' do %>
+    <%= tag.div class: 'profile' do %>
+      <%= tag.h2 'Users', class: "text-center" %>
+      <%= tag.div class: 'container' do %>
 
-      <%#= tag.div class: 'row' do %>
+        <%#= tag.div class: 'row' do %>
         <%#= tag.div class: 'container' do %>
-          <%#= tag.div do %>
-            <%#= link_to root_path, class: "btn btn-success float-right" do %>
-<!--              <i class="fas fa-user-plus"></i> New User-->
-            <%# end %>
-          <%# end %>
+        <%#= tag.div do %>
+        <%#= link_to root_path, class: "btn btn-success float-right" do %>
+        <!--              <i class="fas fa-user-plus"></i> New User-->
         <%# end %>
-      <%# end %>
+        <%# end %>
+        <%# end %>
+        <%# end %>
 
-      <br>
+        <br>
 
-      <%= tag.div class: 'row' do %>
-        <%= tag.div class: 'table-responsive' do %>
-          <%= tag.table class: 'table table-bordered table-hover' do %>
+        <%= tag.div class: 'row' do %>
+          <%= tag.div class: 'table-responsive' do %>
+            <%= tag.table class: 'table table-bordered table-hover' do %>
 
-            <%= tag.thead do %>
-              <%= content_tag(:tr, :class => '') do %>
-                <% rows.each do |item| %>
-                  <%= content_tag(:th, item, class: "text-center") %>
-                <% end %>
-              <% end %>
-            <% end %>
-
-            <%= tag.tbody do %>
-              <% @users.each do |user| %>
+              <%= tag.thead do %>
                 <%= content_tag(:tr, :class => '') do %>
-                  <%= content_tag :td, user.username %>
-                  <%= content_tag :td, user.email %>
-                  <%= content_tag :td, user.address %>
-                  <%= content_tag :td, user.city %>
-                  <%= content_tag :td, user.state %>
-                  <%= content_tag :td, user.zip %>
-
-                  <%= content_tag :td, class: "text-center" do %>
-
-                    <%= link_to edit_user_path(user), class: "btn btn-info" do %>
-                      <i class="far fa-edit"></i>
-                      Edit
-                    <% end %>
-
-                    <%= button_tag "", onclick: "adminDeleteAccount(" + user.id.to_s + ");", class: "btn btn-danger" do %>
-                      <i class="far fa-trash-alt"></i>
-                      Delete
-                    <% end %>
-
-                    <%= button_to "", user, method: :delete, remote: true, class: "d-none", id: "real_delete_" + user.id.to_s %>
+                  <% rows.each do |item| %>
+                    <%= content_tag(:th, item, class: "text-center") %>
                   <% end %>
-
                 <% end %>
               <% end %>
-            <% end %>
 
+              <%= tag.tbody do %>
+                <% @users.each do |user| %>
+                  <%= content_tag(:tr, :class => '') do %>
+                    <%= content_tag :td, user.username %>
+                    <%= content_tag :td, user.email %>
+                    <%= content_tag :td, user.address %>
+                    <%= content_tag :td, user.city %>
+                    <%= content_tag :td, user.state %>
+                    <%= content_tag :td, user.zip %>
+
+                    <%= content_tag :td, class: "text-center" do %>
+
+                      <%= link_to edit_user_path(user), class: "btn btn-info" do %>
+                        <i class="far fa-edit"></i>
+                        Edit
+                      <% end %>
+
+                      <%= button_tag "", onclick: "adminDeleteAccount(" + user.id.to_s + ");", class: "btn btn-danger" do %>
+                        <i class="far fa-trash-alt"></i>
+                        Delete
+                      <% end %>
+
+                      <%= button_to "", user, method: :delete, remote: true, class: "d-none", id: "real_delete_" + user.id.to_s %>
+                    <% end %>
+
+                  <% end %>
+                <% end %>
+              <% end %>
+
+            <% end %>
           <% end %>
         <% end %>
+
+
+
+
       <% end %>
-
-
-
-
     <% end %>
   <% end %>
+<% else %>
+  <h2 style="text-align: center">What are u doing here????</h2>
 <% end %>

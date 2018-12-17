@@ -1,5 +1,6 @@
 <body>
 <%= stylesheet_link_tag "carousel" %>
+<%= stylesheet_link_tag "card" %>
   <div id="carouselMain" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
@@ -7,9 +8,9 @@
       <li data-target="#carouselMain" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active" > <%= image_tag("carousel/air1.jpg", :alt => "dickpic", :class => "d-block w-100") %> </div>
-      <div class="carousel-item"> <%= image_tag("carousel/yeezy1.jpg", :alt => "dickpic2", :class => "d-block w-100") %> </div>
-      <div class="carousel-item"> <%= image_tag("carousel/vapor.jpg", :alt => "dickpic3", :class => "d-block w-100") %> </div>
+      <div class="carousel-item active" > <%= image_tag("carousel/air1.jpg", :alt => "First_Slide", :class => "d-block w-100") %> </div>
+      <div class="carousel-item"> <%= image_tag("carousel/yeezy1.jpg", :alt => "Second_Slide", :class => "d-block w-100") %> </div>
+      <div class="carousel-item"> <%= image_tag("carousel/vapor.jpg", :alt => "Third_slide", :class => "d-block w-100") %> </div>
     </div>
     <a class="carousel-control-prev" href="#carouselMain" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -29,9 +30,9 @@
         <li data-target="#carouselLeft" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item"><%= image_tag("carousel/air1.jpg", :alt => "dickpic", :class => "d-block w-100") %></div>
-        <div class="carousel-item"><%= image_tag("carousel/yeezy1.jpg", :alt => "dickpic", :class => "d-block w-100") %></div>
-        <div class="carousel-item active"><%= image_tag("carousel/vapor.jpg", :alt => "dickpic", :class => "d-block w-100") %></div>
+        <div class="carousel-item"><%= image_tag("carousel/air1.jpg", :alt => "First_Slide", :class => "d-block w-100") %></div>
+        <div class="carousel-item"><%= image_tag("carousel/yeezy1.jpg", :alt => "Second_Slide", :class => "d-block w-100") %></div>
+        <div class="carousel-item active"><%= image_tag("carousel/vapor.jpg", :alt => "Third_Slide", :class => "d-block w-100") %></div>
       </div>
       <a class="carousel-control-prev" href="#carouselLeft" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,9 +51,9 @@
         <li data-target="#carouselRigth" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item"><%= image_tag("carousel/air1.jpg", :alt => "dickpic", :class => "d-block w-100") %></div>
-        <div class="carousel-item active"><%= image_tag("carousel/yeezy1.jpg", :alt => "dickpic", :class => "d-block w-100") %></div>
-        <div class="carousel-item"><%= image_tag("carousel/vapor.jpg", :alt => "dickpic", :class => "d-block w-100") %></div>
+        <div class="carousel-item"><%= image_tag("carousel/air1.jpg", :alt => "First_Slide", :class => "d-block w-100") %></div>
+        <div class="carousel-item active"><%= image_tag("carousel/yeezy1.jpg", :alt => "Second_Slide", :class => "d-block w-100") %></div>
+        <div class="carousel-item"><%= image_tag("carousel/vapor.jpg", :alt => "Third_Slide", :class => "d-block w-100") %></div>
       </div>
       <a class="carousel-control-prev" href="#carouselRigth" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -64,5 +65,26 @@
       </a>
     </div>
   </div>
+
+<div class="contenedor">
+  <ul class="flex-container">
+    <% @shoes.sort_by{|t| - t.dateAdded.to_i}.first(4).each do |shoe| %>
+    <%# @shoes.first(4).each do |shoe| %>
+      <li class="flex-item">
+        <div class="card">
+          <%= link_to shoe, :action => 'go' do %>
+            <% if shoe.image.attached? %>
+              <%= image_tag shoe.image, style: "width:100%" %>
+            <% end %>
+            <div class="container">
+              <h4><%= shoe.brand %></h4>
+              <p><%= shoe.model %></p>
+            </div>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 </body>

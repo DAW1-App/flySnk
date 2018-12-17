@@ -199,3 +199,42 @@ input::-webkit-inner-spin-button {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+#button_buy, #button_group button{
+    color: #fff;
+    background-color: gray;
+    border-color: white;
+    outline: none;
+}
+
+#button_buy:hover, #button_group button:hover{
+    color: #fff;
+    background-color: black;
+    border-color: white;
+}
+
+#button_buy:focus, #button_group:focus, #button_group button:focus{
+    box-shadow: 0 0 0 0.2rem rgba(0,0,0,.5);
+    background-color: black;
+}
+
+#button_buy:not(:disabled):not(.disabled):active, #button_group button:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+
+.separador [type="button"]{
+    margin: 5px;
+}
+
+.lista{
+    list-style-type: none;
+    height: auto;
+    padding-left: 0px;
+}
+
+.lista li{
+    margin: 4%;
+}

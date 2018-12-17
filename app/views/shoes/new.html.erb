@@ -1,4 +1,9 @@
 <h1 style="text-align: center">New Shoe</h1>
 
-<%= render 'form', shoe: @shoe, buttonText: "Add New Sneaker" %>
+<% if user_signed_in? && current_user.id == 1 %>
+  <%= render 'form', shoe: @shoe, buttonText: "Add New Sneaker" %>
+<% else %>
+  <h2 style="text-align: center">What are u doing here????</h2>
+<% end %>
+
 

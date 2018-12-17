@@ -1,3 +1,7 @@
 <h1 style="text-align: center">Edit Shoe View</h1>
-<%= render 'form', shoe: @shoe, buttonText: "Edit"  %>
+<% if user_signed_in? && current_user.id == 1 %>
+  <%= render 'form', shoe: @shoe, buttonText: "Edit"  %>
+<% else %>
+  <h2 style="text-align: center">What are u doing here????</h2>
+<% end %>
 

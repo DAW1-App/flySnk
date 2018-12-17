@@ -1,4 +1,6 @@
 <h1 style="text-align: center">Edit News</h1>
-
-<%= render 'form', news: @news, buttonText: "Edit" %>
-
+<% if user_signed_in? && current_user.id == 1 %>
+  <%= render 'form', news: @news, buttonText: "Save" %>
+<% else %>
+  <h2 style="text-align: center">What are u doing here????</h2>
+<% end %>

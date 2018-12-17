@@ -1,9 +1,11 @@
 <div class="contenedor">
   <div class="row row-up">
     <% if user_signed_in? && current_user.id == 1 %>
-        <%= link_to 'Edit', edit_shoe_path(@shoe), class: 'row-up btn btn-primary btn-block' %>
+        <%= link_to 'Edit', edit_shoe_path(@shoe), class: 'row-up btn btn-primary btn-block', id: "button_buy" %>
     <% end %>
+
   </div>
+  <br>
   <div class="row row-up">
     <% if @shoe.image.attached? %>
       <div class="col-sm-6">
@@ -25,7 +27,7 @@
           <h3><small>Sizes Available</small></h3>
         </li>
         <li>
-          <div class="separador btn-group w-100">
+          <div class="separador btn-group w-100" id="button_group">
             <button type="button" class="btn btn-primary w-100"> 36 </button>
             <button type="button" class="btn btn-primary w-100"> 37 </button>
             <button type="button" class="btn btn-primary w-100"> 38 </button>
@@ -35,7 +37,7 @@
           </div>
         </li>
         <li>
-          <div class="separador btn-group w-100">
+          <div class="separador btn-group w-100" id="button_group">
             <button type="button" class="btn btn-primary w-100"> 42 </button>
             <button type="button" class="btn btn-primary w-100"> 43 </button>
             <button type="button" class="btn btn-primary w-100"> 44 </button>
@@ -45,12 +47,13 @@
           </div>
         </li>
         <li>
-          <button type="button" class="row-up btn btn-primary btn-block">Comprar</button>
+          <button type="button" class="row-up btn btn-primary btn-block" id="button_buy">Buy</button>
         </li>
       </ul>
     </div>
 
   </div>
+  <br>
   <div class="row row-up">
     <p style="text-align: center; width: 100%"><%= @shoe.info %></p>
   </div>
