@@ -1,48 +1,114 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= tag.div class: 'contenedor' do %>
+  <h2 class="text-center">Edit <%= resource_name.to_s.humanize %></h2>
+  <%= tag.div class: 'profile' do %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+      <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+      <%= tag.div class: 'form-row' do %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %></p>
-  </div>
+        <%= tag.div class: 'form-group col-md-6' do %>
+          <%= f.label :username, "UserName" %>
+          <%= f.text_field :username, class: "form-control" %>
+        <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <%= tag.div class: 'form-group col-md-6' do %>
+          <%= f.label :email %><br/>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+        <% end %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+
+      <%= tag.div class: 'form-row' do %>
+
+        <%= tag.div class: 'form-group col-md-6' do %>
+          <%= f.label :password %> <br><i>(leave blank if you don't want to change it)</i><br/>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+          <% if @minimum_password_length %>
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+        <% end %>
+
+        <%= tag.div class: 'form-group col-md-6' do %>
+          <br>
+          <%= f.label :password_confirmation %><br/>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+        <% end %>
+
+      <% end %>
+
+
+      <%= tag.div class: 'form-group' do %>
+        <%= f.label :address %><br/>
+        <%= f.text_field :address, autocomplete: "address", class: "form-control" %>
+      <% end %>
+
+
+      <%= tag.div class: 'form-row' do %>
+
+        <%= tag.div class: 'form-group col-md-6' do %>
+          <%= f.label :city %><br/>
+          <%= f.text_field :city, autocomplete: "city", class: "form-control" %>
+        <% end %>
+
+        <%= tag.div class: 'form-group col-md-3' do %>
+          <%= f.label :state %><br/>
+          <%= f.text_field :state, autocomplete: "state", class: "form-control" %>
+        <% end %>
+
+        <%= tag.div class: 'form-group col-md-3' do %>
+          <%= f.label :zip %><br/>
+          <%= f.number_field :zip, autocomplete: "zip", class: "form-control" %>
+        <% end %>
+
+      <% end %>
+
+
+
+      <%= tag.div class: 'form-row' do %>
+
+        <%= tag.div class: 'form-group col-md-6' do %>
+          <%= f.label :current_password %> <br> <i>(we need your current password to confirm your changes)</i>
+          <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+        <% end %>
+      <% end %>
+
+
+
+      <%= f.submit "Update Profile", class: "btn btn-success float-right" %>
+      <%= tag.div class: 'space' %>
+
+    <% end %>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+  <%= tag.div class: 'space' %>
+
+
+
+  <h3 class="text-center">Cancel my account</h3>
+
+  <%= tag.div class: 'profile' do %>
+
+    <%= button_to "", registration_path(resource_name), id: "real_delete_acc_button", method: :delete, class: "d-none" %>
+    <%= button_to "Cancel my account", root_path, onclick: "deleteAccount();", class: "btn btn-danger float-right", :style => 'margin-top: 15px;' %>
+
+
+    <%= tag.div class: 'form-row' do %>
+      <%= tag.div class: 'form-group col-md-6', :style => 'margin-top: 20px;' do %><h5>Unhappy?</h5>
+      <% end %>
     <% end %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+  <% end %>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+  <%= tag.div class: 'space' %>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<%= javascript_include_tag "sweetalert2.all.min" %>
+<%= javascript_include_tag "sweetAlerts" %>

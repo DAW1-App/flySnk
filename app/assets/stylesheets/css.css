@@ -178,3 +178,24 @@ nav form button:hover > a {
 #center-row{
     justify-content: center;
 }
+
+
+
+
+.space {
+    height: 45px;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.swal2-cancel, .swal2-confirm {
+    margin-left: 10px;
+    margin-right: 10px;
+}

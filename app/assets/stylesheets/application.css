@@ -12,7 +12,8 @@
  *
  * require_tree .
  *= require_self
- *= require bootstrap/bootstrap
+ *= require bootstrap/bootstrap.min
+ *= require bootstrap/bootstrap-grid.min
  *= require css
  *= require nav
  */
