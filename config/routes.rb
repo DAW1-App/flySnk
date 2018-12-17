@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/about'
   get 'news/admin_new'
   resources :news
   get 'shoes/admin_shoe'
