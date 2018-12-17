@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<% if @news.images.attached? %>
+  <% n = 0 %>
+  <%= div_for @news.images do |image| %>
+    <% n += 1 %>
+    <%= tag.div class: 'col-sm-6' do %>
+      <%= image_tag image, alt: @news.shoeName + n.to_s , class: "d-block mx-auto rounded img-fluid" %>
+    <% end %>
+  <% end %>
+<% end %>
+
 <p>
   <strong>Shoename:</strong>
   <%= @news.shoeName %>

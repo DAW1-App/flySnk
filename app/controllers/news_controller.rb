@@ -7,14 +7,15 @@ class NewsController < ApplicationController
     @news = News.all
   end
 
+
   # GET /news/1
   # GET /news/1.json
   def show
   end
 
-  # def admin_new
-  #   @news = News.all
-  # end
+  def admin_new
+    @news = News.all
+  end
 
   # GET /news/new
   def new

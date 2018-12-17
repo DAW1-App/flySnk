@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  get 'news/admin_new'
   resources :news
-  # get 'news/admin_new'
   get 'shoes/admin_shoe'
   devise_for :users
   root 'welcome#index'
