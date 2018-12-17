@@ -1,38 +1,29 @@
-<% if @news.images.attached? %>
-  <% n = 0 %>
-  <%= div_for @news.images do |image| %>
-    <% n += 1 %>
-    <%= tag.div class: 'col-sm-6' do %>
+<head xmlns="http://www.w3.org/1999/html">
+<%= stylesheet_link_tag "release" %>
+</head>
       <main>
         <article>
-          <header>
-            <div id="imageWrapper"><%= image_tag image, alt: @news.shoeName + n.to_s , class: "d-block mx-auto rounded img-fluid" %></div>
-            <p><strong>Shoename:</strong> <%= @news.shoeName %><br>
-              <strong>Smalltext:</strong> <%= @news.smallText %><br>
-              <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
-              <strong>Price:</strong> <%= @news.price %> <br>
-              <strong>Color:</strong> <%= @news.color %><br>
-              <strong>Largetext:</strong> <%= @news.largeText %>
+          <p>
+            <%if @news.images.attached?%>
+                <strong>Smalltext:</strong> <%= @news.smallText %><br>
+                <% @news.images.first(1).each do |image| %>
+                  <div id="imageWrapper"><%= image_tag image, alt: @news.shoeName , class: "d-block mx-auto rounded img-fluid" %></div>
+                <%end %>
+                  <p>
+                    <strong>Shoename:</strong> <%= @news.shoeName %><br>
+                    <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
+                    <strong>Price:</strong> <%= @news.price %> <br>
+                    <strong>Color:</strong> <%= @news.color %><br>
+                    <strong>Largetext:</strong> <%= @news.largeText %>
+                  </p>
+                  <%index = 1 %>
+                  <% @news.images.each do |image| %>
+                    <% if index > 1%>
+                      <div id="imageWrapper"><%= image_tag image, alt: @news.shoeName , class: "d-block mx-auto rounded img-fluid" %></div>
+                    <% end %>
+                    <% index = index + 1 %>
+                  <%end %>
+            <% end %>
           </header>
         </article>
       </main>
-    <% end %>
-  <% end %>
-<%else %>
-  <main>
-    <article>
-      <header>
-        <p><strong>Shoename:</strong> <%= @news.shoeName %><br>
-          <strong>Smalltext:</strong> <%= @news.smallText %><br>
-          <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
-          <strong>Price:</strong> <%= @news.price %> <br>
-          <strong>Color:</strong> <%= @news.color %><br>
-          <strong>Largetext:</strong> <%= @news.largeText %>
-      </header>
-    </article>
-  </main>
-
-
-
-
-<%end%>
