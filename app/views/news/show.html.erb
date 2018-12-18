@@ -5,16 +5,26 @@
         <article>
           <p>
             <%if @news.images.attached?%>
+
+                <strong><%= @news.shoeName %></strong><br>
                 <%= @news.smallText %><br>
+
                 <% @news.images.first(1).each do |image| %>
                   <div id="imageWrapper"><%= image_tag image, alt: @news.shoeName , class: "d-block mx-auto rounded img-fluid" %></div>
                 <%end %>
                   <p>
-                    <strong><%= @news.shoeName %></strong><br>
-                    <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
-                    <strong>Price:</strong> <%= @news.price %>€<br>
-                    <strong>Color:</strong> <%= @news.color %><br>
-                    <%= @news.largeText %>
+                    <% if @news.releaseDate? %>
+                      <strong>Releasedate:</strong> <%= @news.releaseDate %><br>
+                    <%end %>
+                    <%if @news.price? %>
+                      <strong>Price:</strong> <%= @news.price %>€<br>
+                    <%end %>
+                    <% if @news.color? %>
+                      <strong>Color:</strong> <%= @news.color %><br>
+                    <%end %>
+                    <% if @news.largeText? %>
+                      <%= @news.largeText %>
+                    <%end %>
                   </p>
                   <%index = 1 %>
                   <% @news.images.each do |image| %>
